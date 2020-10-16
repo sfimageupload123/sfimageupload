@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	     <div class="slds-page-header__row">
+                            <div class="slds-page-header__col-details slds-m-top_small">
+                                <iframe aura:id="vfFrame" src="https://googlesfupload123-dev-ed--mpm4-base.visualforce.com/apex/Milestone2_Charts_GanttMilestones?id=a072w00000FQETTAA5" width="800px" height="250px"/>
+                            </div>
+                        </div>
+</aura:component>

@@ -1,0 +1,39 @@
+<apex:page action="{!init}" controller="GoogleDriveController" showHeader="false" standardStylesheets="false" lightningStyleSheets="true">  
+
+   <style type="text/css">  
+
+     .exactCenter {  
+
+     width: 60%;  
+
+     height: 300px;  
+
+     position: absolute;  
+
+     background-color: #F0F0F0;  
+
+     left: 50%;  
+
+     top: 50%;  
+
+     transform: translate(-50%, -50%);  
+
+     }  
+
+   </style>  
+
+   <apex:slds />  
+
+   <div class="slds-scope">   
+
+     <apex:form >  
+
+         <b><center><font size="4" color="blue">Click on button to Save token!</font></center></b><br/>  
+
+         <b><center><apex:commandButton value="Save token" action="{!SaveToken}" styleclass="slds-button slds-button_brand" /></center></b>  
+
+     </apex:form>  
+
+   </div>  
+
+ </apex:page>

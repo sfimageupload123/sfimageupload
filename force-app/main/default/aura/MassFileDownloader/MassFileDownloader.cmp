@@ -1,0 +1,41 @@
+<!--
+  @Component Name     : MassFileUploader.cmp
+  @Description        : 
+  @Author             : 
+  @Group              : 
+  @Last Modified By   : 
+  @Last Modified On   : 09/10/2020, 
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    09/10/2020,    						     Initial Version
+-->
+<aura:component implements="force:appHostable" controller="MassFileDownloadController">
+    <aura:attribute name="dateVal" type="Date" />
+    <aura:attribute name="showLoadingSpinner" type="boolean" default="false" />
+    
+    
+     <aura:if isTrue="{!v.showLoadingSpinner}">
+     	<c:SpinnerComp/>
+    </aura:if>
+    <lightning:layout horizontalAlign="spread" multipleRows="true">
+        <lightning:layoutItem size="3" smallDeviceSize="3" mediumDeviceSize="12" largeDeviceSize="3" padding="around-small"/>
+        <lightning:layoutItem size="6" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="12" padding="around-small">
+            <div class="slds-box" style="background-color:white">
+                	<p>Please Select Date to Download Files > 8 MB</p>
+                <div class="slds-p-around_small">
+                    <div class="slds-page-header__row">
+                        <lightning:input name="date" aura:id="datevalue" label="Enter Date" type="date" dateStyle="medium" value="{!v.dateVal}"/>
+                    </div>
+                </div>
+                <div class="slds-p-around_small">                    
+                    <div class="slds-page-header__row">
+                        <lightning:button variant="brand" label="Download Zip Files" title="Base action" onclick="{!c.handleClick }"/>
+                    </div>
+                </div>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="3" smallDeviceSize="3" mediumDeviceSize="3" largeDeviceSize="3" padding="around-small"/>
+    </lightning:layout>    
+</aura:component>
